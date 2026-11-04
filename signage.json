@@ -1,0 +1,13 @@
+{
+  "manifestUrl": "https://cs-signage.github.io/calvary-signage/lobby.json",
+  "screenId": "lobby",
+  "adminKey": "EUkkb3ri93XcqLpL",
+  "allowedHosts": [],
+  "allowHttp": false,
+  "cacheBust": true,
+  "defaultPollSeconds": 120,
+  "cacheVolume": "auto",
+  "maxCacheMB": 400,
+  "maxVideoMB": 250,
+  "statusOnBoot": true
+}
