@@ -1,0 +1,33 @@
+{
+  "$schema": "./signage-manifest.schema.json",
+  "version": 1,
+  "name": "Student Center lobby",
+  "settings": {
+    "pollSeconds": 120,
+    "imageSeconds": 10,
+    "transition": "fade",
+    "transitionMs": 600,
+    "fit": "fit",
+    "muteVideo": true,
+    "showStatus": false
+  },
+  "defaultPlaylist": "main",
+  "playlists": {
+    "main": [
+      { "id": "welcome", "url": "slides/welcome.png" },
+      { "id": "winter-retreat", "url": "slides/winter-retreat.png", "seconds": 12, "when": { "until": "2026-12-15" } },
+      { "id": "serve-team", "url": "slides/serve-team.png" },
+      { "id": "sample-clip", "type": "video", "url": "media/sample-clip.mp4", "when": { "days": ["sun", "wed"] } }
+    ],
+    "wednesday-night": [
+      { "id": "tonight", "url": "slides/tonight.png", "seconds": 15 },
+      { "id": "welcome", "url": "slides/welcome.png" }
+    ],
+    "after-hours": []
+  },
+  "schedule": [
+    { "id": "wednesday-night", "playlist": "wednesday-night", "priority": 10, "when": { "days": ["wed"], "start": "17:30", "end": "21:30" } },
+    { "id": "overnight", "playlist": "after-hours", "priority": 100, "when": { "start": "22:00", "end": "07:00" } }
+  ],
+  "commands": { "restart": "1", "purgeCache": "1" }
+}
